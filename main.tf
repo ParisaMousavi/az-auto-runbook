@@ -13,24 +13,6 @@ resource "azurerm_automation_runbook" "this" {
       uri = var.publish_content_link
     }
   }
-  parameters = [
-    {
-      default_value = module.resourcegroup.name
-      key           = "resourceGroup"
-    },
-    {
-      default_value = "vm1"
-      key           = "VMName"
-    },
-    {
-      default_value = "UA"
-      key           = "method"
-    },
-    {
-      default_value = module.auto_m_id_name.result
-      key           = "UAMI"
-    }
-  ]
   tags = merge(
     var.additional_tags,
     {
