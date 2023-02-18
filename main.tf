@@ -13,7 +13,7 @@ resource "azurerm_automation_runbook" "this" {
       uri = var.publish_content_link
     }
   }
-  content = var.runbook_type == "PowerShell" ? var.content : null
+  content = var.content
   tags = merge(
     var.additional_tags,
     {
