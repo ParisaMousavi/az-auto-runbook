@@ -42,3 +42,7 @@ variable "additional_tags" {
   default = {}
   type    = map(string)
 }
+
+variable "content" {
+  type = string
+}
