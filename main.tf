@@ -15,7 +15,7 @@ resource "azurerm_automation_runbook" "this" {
   }
   content = var.content
   dynamic "parameters" {
-    for_each = var.paparameters
+    for_each = var.parameters
     content {
       default_value = parameters.default_value
       key           = parameters.key
