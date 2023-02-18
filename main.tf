@@ -13,8 +13,14 @@ resource "azurerm_automation_runbook" "this" {
       uri = var.publish_content_link
     }
   }
-  content    = var.content
-  parameters = var.parameters
+  content = var.content
+  dynamic "parameters" {
+    for_each = var.paparameters
+    content {
+      default_value = parameters.default_value
+      key           = parameters.key
+    }
+  }
   tags = merge(
     var.additional_tags,
     {
