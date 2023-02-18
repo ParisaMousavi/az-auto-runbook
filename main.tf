@@ -13,4 +13,10 @@ resource "azurerm_automation_runbook" "this" {
       uri = var.publish_content_link
     }
   }
+  tags = merge(
+    var.additional_tags,
+    {
+      created-by = "iac-tf"
+    },
+  )
 }

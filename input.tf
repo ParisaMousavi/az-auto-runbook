@@ -37,3 +37,8 @@ variable "publish_content_link" {
   type    = string
   default = null
 }
+
+variable "additional_tags" {
+  default = {}
+  type    = map(string)
+}
