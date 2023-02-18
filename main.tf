@@ -7,6 +7,7 @@ resource "azurerm_automation_runbook" "this" {
   log_progress            = var.log_progress
   description             = var.description
   runbook_type            = var.runbook_type
+  content                 = var.content
   dynamic "publish_content_link" {
     for_each = var.publish_content_link == null ? [] : [1]
     content {
