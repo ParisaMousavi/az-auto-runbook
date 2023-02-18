@@ -48,7 +48,7 @@ variable "content" {
   default = null
 }
 
-variable "parameters " {
+variable "parameters" {
   type = list(object({
     key           = string
     default_value = string
