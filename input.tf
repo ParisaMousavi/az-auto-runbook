@@ -44,5 +44,6 @@ variable "additional_tags" {
 }
 
 variable "content" {
-  type = string
+  type    = string
+  default = null
 }
