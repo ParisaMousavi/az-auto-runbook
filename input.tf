@@ -47,3 +47,11 @@ variable "content" {
   type    = string
   default = null
 }
+
+variable "parameters " {
+  type = list(object({
+    key           = string
+    default_value = string
+  }))
+
+}

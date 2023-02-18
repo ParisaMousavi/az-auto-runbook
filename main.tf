@@ -13,7 +13,8 @@ resource "azurerm_automation_runbook" "this" {
       uri = var.publish_content_link
     }
   }
-  content = var.content
+  content    = var.content
+  parameters = var.parameters
   tags = merge(
     var.additional_tags,
     {
